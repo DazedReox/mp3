@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube to MP3</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>YouTube → MP3</h1>
+
+        <p>Introduce el enlace de un vídeo de YouTube</p>
+
+        <div class="converter">
+
+            <input
+                type="text"
+                id="youtube-url"
+                placeholder="https://www.youtube.com/watch?v=..."
+            >
+
+            <button id="convert-button">
+                Convertir
+            </button>
+
+        </div>
+
+        <div id="status"></div>
+
+            <section id="video-info" class="video-info hidden">
+
+                <img id="video-thumbnail" src="" alt="Miniatura del vídeo">
+
+                <div class="video-details">
+
+                    <h2 id="video-title"></h2>
+
+                    <p>
+                        Canal:
+                        <span id="video-uploader"></span>
+                    </p>
+
+                    <p>
+                        Duración:
+                        <span id="video-duration"></span>
+                    </p>
+                    <div class="quality-selector">
+
+                    <label for="quality">
+                        Calidad MP3:
+                    </label>
+
+                    <select id="quality">
+
+                        <option value="128K">128 kbps</option>
+                        <option value="192K" selected>192 kbps</option>
+                        <option value="256K">256 kbps</option>
+                        <option value="320K">320 kbps</option>
+
+                    </select>
+
+                </div>
+                    
+                    <button id="download-button">
+                        Descargar MP3
+                    </button>
+                </div>
+                
+
+            </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
